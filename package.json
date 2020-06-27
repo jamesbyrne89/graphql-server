@@ -1,0 +1,38 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "description": "Learning how to make GraphQL servers with a dummy database",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "restart": "rimraf dist && npm run build && npm start",
+    "dev": "nodemon --exec npm restart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesbyrne89/graphql-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesbyrne89/graphql-server/issues"
+  },
+  "homepage": "https://github.com/jamesbyrne89/graphql-server#readme",
+  "dependencies": {
+    "@types/graphql": "^14.5.0",
+    "apollo-server": "^2.15.0",
+    "graphql": "^15.1.0",
+    "nodemon": "^2.0.4",
+    "typescript": "^3.9.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.10.2"
+  }
+}
