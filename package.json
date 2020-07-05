@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "restart": "rimraf dist && npm run build && npm start",
+    "restart": "rimraf dist ./node_modules/.cache/babel-loader && npm run build && npm start",
     "dev": "nodemon --exec npm restart"
   },
   "repository": {
@@ -32,6 +32,9 @@
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
+    "babel-plugin-import-graphql": "^2.7.0",
+    "graphql-import": "^1.0.2",
+    "graphql-tools": "^6.0.11",
     "rimraf": "^3.0.2",
     "ts-node": "^8.10.2"
   }
